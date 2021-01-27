@@ -142,3 +142,108 @@ let age = 31;
 
 console.log(lifeStatus(firstName, age));
 console.log(lifeStatus("Zain", 12));
+
+let color = "red";
+switch (color) {
+  case "pink":
+    isLoged = false;
+
+    // more code
+    console.log("cool this is pink");
+    break;
+  case "red":
+    console.log("cool this is red");
+    break;
+  case "white":
+    console.log("cool this is white");
+    break;
+  default:
+    console.log("sorry you need to enter a color");
+}
+// more
+let userKidsNumber = 12;
+
+switch (userKidsNumber) {
+  case 1:
+    console.log("You are new parent with 1 child");
+    break;
+  case 1:
+    console.log("You are new parent with 1 child");
+    break;
+  case 2:
+    console.log("You have 2 kids nice ");
+    break;
+  case 3:
+    console.log("You have 3 kids nice ");
+    break;
+  case 4:
+  case 5:
+  case 6:
+    console.log("You have many kids nice ");
+    break;
+  default:
+    console.log("Cool you are happy parent :) ");
+}
+
+// Capitalize. Create a program that capitalizes the first letter of each element in an array of names. Examples:
+// ["matt", "sara", "lara"] ➞ ["Matt", "Sara", "Lara"]
+
+// ["samuel", "MARIA", "lUkE", "mary"] ➞ ["Samuel", "Maria", "Luke", "Mary"]
+
+// ["Cynthia", "Karen", "Jane", "Carrie"] ➞ ["Cynthia", "Karen", "Jane", "Carrie"]
+
+const capitalize = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1).toLowerCase();
+  }
+  return arr;
+};
+
+console.log(capitalize(["samuel", "MARIA", "lUkE", "mary"]));
+console.log(capitalize(["zIan", "hADI", "naCY", "mary"]));
+// City Names.
+// Create an array of city names. Loop through the array and add the city names to a string. Examples:
+// [Berlin, Paris, Prague, Rome] ➞ expected output: “Berlin, Paris, Prague, Rome.”.
+
+const arrayToStr = (arr) => {
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str += arr[i];
+    if (i == arr.length - 1) {
+      str += ".";
+    } else {
+      str += ", ";
+    }
+  }
+  return str;
+};
+console.log(arrayToStr(["Berlin", "Paris", "Prague", "Rome"]));
+// Hello
+//  Create an array filled with your friends’ or family’s names. Loop over the array and greet each friend. Bonus: Print the indexes of each item in the array. Examples:
+// [Maria, Mike, Paul, Doven] ➞ expected output: “Hello Maria! Hello Mike! Hello Paul! Hello Doven!”
+// Bonus [Susan, Rezvane, Mark] ➞ expected bonus output: “Susan is at index 0 of my friends and family array, Rezvane is at index 1 of my friends and family array, Mark is at index 2 of my friends and family array”.
+
+const hallo = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(`Hallo ${arr[i]} ,I am the index of ${i} `);
+  }
+};
+hallo(["Susan", "Rezvane", "Mark"]);
+// Odds and Evens.
+// Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:
+// [3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
+// [6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+
+// DRY
+const oddOrEven = (arr) => {
+  let currentValue;
+  for (let i = 0; i < arr.length; i++) {
+    currentValue = arr[i];
+    if (currentValue % 2) {
+      console.log(currentValue - 1);
+    } else {
+      console.log(currentValue + 1);
+    }
+  }
+};
+oddOrEven([3, 5, 2, 4]);
