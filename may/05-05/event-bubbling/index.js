@@ -28,3 +28,13 @@ hide.addEventListener("change", () => {
 // also don't forget this cool thing
 // classList
 // https://developer.mozilla.org/en-US/docs/Web/API/Element/classList#examples
+const list2 = document.querySelector(".addElme");
+console.log(list2);
+list2.addEventListener("click", function (e) {
+  if (e.target.className == "add") {
+    let li = e.target.parentElement;
+    const result = document.querySelector(".result");
+    li = document.createElement("li");
+    li.appendChild(result).value = "";
+  }
+});
