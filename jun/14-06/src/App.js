@@ -8,7 +8,7 @@ import ProductList from "./components/ProductList";
 import { FaBeer } from "react-icons/fa";
 import { WiAlien, WiNightAltThunderstorm } from "react-icons/wi";
 
-//library.add(fab, faCheckSquare, faCoffee);
+// library.add(fab, faCheckSquare, faCoffee);
 const App = () => {
   const [data, setData] = useState(Data);
   const [userInput, setUserInput] = useState("");
