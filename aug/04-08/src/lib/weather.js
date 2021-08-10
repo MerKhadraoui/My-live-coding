@@ -11,12 +11,13 @@ function formatData(data) {
       .map((condition) => condition.description)
       .join(", ")}
     `;
+  console.log(currentData);
   return result;
 }
 
 module.exports = async function weather(city, country) {
   const client = new OpenWeatherClient(API_KEY);
   const currentData = await client.getWeather(city, country);
-  // console.log(currentData);
+
   return formatData(currentData);
 };
